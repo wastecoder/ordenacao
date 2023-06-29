@@ -1,7 +1,7 @@
 package algoritmo;
 
-public class BubbleSort<T extends Comparable<T>> {
-    public void bubbleSort(T[] lista) {
+public class BubbleSort {
+    public <T extends Comparable<T>> void sort(T[] lista) {
         T auxTroca;
         for (int i = 0; i < lista.length; i++) {
             for (int j = 0; j < lista.length - 1; j++) {

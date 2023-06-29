@@ -1,7 +1,7 @@
 package algoritmo;
 
-public class SelectionSort<T extends Comparable<T>> {
-    public void sort(T[] lista) {
+public class SelectionSort {
+    public <T extends Comparable<T>> void sort(T[] lista) {
         int menorIndice;
         T auxTroca;
         for (int i = 0; i < lista.length - 1; i++) {
