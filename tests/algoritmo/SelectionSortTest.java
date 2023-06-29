@@ -1,4 +1,4 @@
-package algoritmo.selectionsort;
+package algoritmo;
 
 import org.junit.jupiter.api.Test;
 
@@ -61,13 +61,13 @@ class SelectionSortTest extends SelectionSort<Integer> {
 
     @Test
     void numerosRepetidos() {
-        Integer[] numerosInvertidos = {9, 9, 9, 4, 4, 0, 3, 3, 1, 4, 3, 4};
-        Integer[] retornoEsperado = numerosInvertidos.clone();
+        Integer[] numerosRepetidos = {9, 9, 9, 4, 4, 0, 3, 3, 1, 4, 3, 4};
+        Integer[] retornoEsperado = numerosRepetidos.clone();
 
-        sort(numerosInvertidos);
+        sort(numerosRepetidos);
         Arrays.sort(retornoEsperado);
 
-        assertArrayEquals(retornoEsperado, numerosInvertidos);
+        assertArrayEquals(retornoEsperado, numerosRepetidos);
     }
 
     @Test

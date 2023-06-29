@@ -1,4 +1,4 @@
-package algoritmo.selectionsort;
+package algoritmo;
 
 public class SelectionSort<T extends Comparable<T>> {
     public void sort(T[] lista) {
