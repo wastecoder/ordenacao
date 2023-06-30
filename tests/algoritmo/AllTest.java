@@ -10,6 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 public class AllTest {
     BubbleSort bubbleSort = new BubbleSort();
     SelectionSort selectionSort = new SelectionSort();
+    InsertionSort insertionSort = new InsertionSort();
 
     /*
     Os testes são feitos comparando o resultado do
@@ -47,6 +48,14 @@ public class AllTest {
 
             assertArrayEquals(retornoEsperado, integerAleatorios);
         }
+
+        @Test
+        void insertionSort() {
+            Arrays.sort(retornoEsperado);
+            insertionSort.sort(integerAleatorios);
+
+            assertArrayEquals(retornoEsperado, integerAleatorios);
+        }
     }
 
     @Nested
@@ -69,6 +78,14 @@ public class AllTest {
 
             assertArrayEquals(retornoEsperado, integerInvertidos);
         }
+
+        @Test
+        void insertionSort() {
+            Arrays.sort(retornoEsperado);
+            insertionSort.sort(integerInvertidos);
+
+            assertArrayEquals(retornoEsperado, integerInvertidos);
+        }
     }
 
     @Nested
@@ -86,6 +103,13 @@ public class AllTest {
         @Test
         void selectionSort() {
             selectionSort.sort(floatOrdenados);
+
+            assertArrayEquals(retornoEsperado, floatOrdenados);
+        }
+
+        @Test
+        void insertionSort() {
+            insertionSort.sort(floatOrdenados);
 
             assertArrayEquals(retornoEsperado, floatOrdenados);
         }
@@ -111,6 +135,14 @@ public class AllTest {
 
             assertArrayEquals(retornoEsperado, floatRepetidos);
         }
+
+        @Test
+        void insertionSort() {
+            Arrays.sort(retornoEsperado);
+            insertionSort.sort(floatRepetidos);
+
+            assertArrayEquals(retornoEsperado, floatRepetidos);
+        }
     }
 
     @Nested
@@ -133,6 +165,14 @@ public class AllTest {
 
             assertArrayEquals(retornoEsperado, stringAleatoria);
         }
+
+        @Test
+        void insertionSort() {
+            Arrays.sort(retornoEsperado);
+            insertionSort.sort(stringAleatoria);
+
+            assertArrayEquals(retornoEsperado, stringAleatoria);
+        }
     }
 
     @Nested
@@ -152,6 +192,14 @@ public class AllTest {
         void selectionSort() {
             Arrays.sort(retornoEsperado);
             selectionSort.sort(stringInvertida);
+
+            assertArrayEquals(retornoEsperado, stringInvertida);
+        }
+
+        @Test
+        void insertionSort() {
+            Arrays.sort(retornoEsperado);
+            insertionSort.sort(stringInvertida);
 
             assertArrayEquals(retornoEsperado, stringInvertida);
         }
