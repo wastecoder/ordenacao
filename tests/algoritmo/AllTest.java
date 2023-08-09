@@ -8,8 +8,8 @@ import java.util.Arrays;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class AllTest {
-    BubbleSort bubbleSort = new BubbleSort();
     SelectionSort selectionSort = new SelectionSort();
+    BubbleSort bubbleSort = new BubbleSort();
     InsertionSort insertionSort = new InsertionSort();
     MergeSort mergeSort = new MergeSort();
     QuickSort quickSort = new QuickSort();

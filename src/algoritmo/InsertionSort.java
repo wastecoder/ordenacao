@@ -7,7 +7,7 @@ public class InsertionSort {
         //1 porque a posição 0 se inicia como sub-vetor ordenado
         for (int i = 1; i < lista.length; i++) {
             chave = lista[i]; //Chave = quem vamos ordenar (desordenado)
-            j = i - 1; //j = todos a esquerda da chave (sub-vetor já ordenado)
+            j = i - 1; //j = todos à esquerda da chave (sub-vetor já ordenado)
 
             //Troca a chave com o valor a esquerda quando ela é maior
             while (j >= 0 && lista[j].compareTo(chave) > 0) {

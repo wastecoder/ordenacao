@@ -9,10 +9,11 @@ public class SelectionSort {
             menorIndice = i;
             for (int j = i; j < lista.length; j++) {
                 //TODO: explicar o compareTo() na parte de ordenação pronta do Java
+                //(lista[j] < lista[menorIndice])
                 if (lista[j].compareTo(lista[menorIndice]) < 0) menorIndice = j;
             }
 
-            //Troca a posição dos menores número com os primeiros valores
+            //Troca a posição dos menores números com os primeiros valores
             auxTroca = lista[i];
             lista[i] = lista[menorIndice];
             lista[menorIndice] = auxTroca;

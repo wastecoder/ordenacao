@@ -16,7 +16,7 @@ public class QuickSort {
         }
     }
 
-    //Troca os valores de um ventor entre duas posições
+    //Troca os valores de um vetor entre duas posições
     public <T extends Comparable<T>> void trocar(T[] lista, int posicao1, int posicao2) {
         T aux = lista[posicao1];
         lista[posicao1] = lista[posicao2];
@@ -25,9 +25,10 @@ public class QuickSort {
 
     /*
     Particionamento de Lomuto - é mais simples, mas menos eficiente que o de Hoare.
-    Nele é escolhido um elemento como pivô, depois é colocado os menores a esquerda e os maiores a direita dele. Abaixo o pivô é sempre o primeiro.
-    Após fazer isso, troca o pivô com o último a esquerda, assim ele fica na sua posição correta.
-    Isso é repetido com o subarray a esquerda e a direita do pivô.
+    Nele é escolhido um elemento como pivô, depois é colocado os menores a esquerda e os maiores a direita dele.
+    Abaixo o pivô é sempre o primeiro. Poderia ser escolhido outra posição, como será discutido abaixo.
+    Após fazer isso, troca o pivô com o último à direita dos ordenados, assim ele fica na sua posição correta.
+    Isso é repetido com o subarray a esquerda e à direita do pivô.
     */
     public <T extends Comparable<T>> int partition(T[] lista, int esquerda, int direita) {
         T pivo = lista[esquerda]; //Escolhe o primeiro elemento como pivô
@@ -59,7 +60,7 @@ public class QuickSort {
      */
 
     /*
-    O pior caso é raro de acontecer, mas há técnicas para evitá-lo.
+    O pior caso é raro de acontecer, mas há técnicas para evitá-lo:
     1. Escolher o pivô aleatoriamente
     2. Escolher o pivô por mediana entre o início e fim
     */

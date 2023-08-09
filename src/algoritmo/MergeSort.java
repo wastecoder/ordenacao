@@ -6,7 +6,9 @@ import java.util.Arrays;
 public class MergeSort {
     //Assinatura menor apenas para facilitar a chamada do sort()
     public <T extends Comparable<T>> void sort(T[] lista) {
-        if (lista == null || lista.length <= 1) return;
+        if (lista == null || lista.length <= 1) {
+            throw new IllegalArgumentException("A lista deve conter pelo menos dois elementos.");
+        }
 
         sort(lista, 0, lista.length - 1);
     }
@@ -26,7 +28,7 @@ public class MergeSort {
     //Primeiro subarray: lista[inicio...meio]
     //Segundo subarray: lista[meio+1...fim]
     private <T extends Comparable<T>> void merge(T[] lista, int inicio, int meio, int fim) {
-        //Transfere os elementos entre inicio e fim a um vetor auxiliar - então não é in-place
+        //Transfere os elementos entre início e fim a um vetor auxiliar - então não é in-place
         //O vetor original guarda a ordenação, o auxiliar guarda o estado inicial
         T[] aux = Arrays.copyOf(lista, lista.length);
 
@@ -49,7 +51,7 @@ public class MergeSort {
 
         //Se a primeira metade não foi toda consumida, coloca o resto no vetor
         while (i <= meio) {
-            lista[k++] = aux[i++]; //A simplificação do ++ poderia ter sido feito acima
+            lista[k++] = aux[i++]; //A simplificação do ++ poderia ter sido usada acima
         }
 
         //Se a segunda metade não foi toda consumida, coloca o resto no vetor
